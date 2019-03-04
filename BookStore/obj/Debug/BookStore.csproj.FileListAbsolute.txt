@@ -1,0 +1,1 @@
+D:\Technical\Dapper\BookStoreEVE\BookStore\obj\Debug\BookStore.csprojResolveAssemblyReference.cache

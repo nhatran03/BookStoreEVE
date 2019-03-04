@@ -1,0 +1,5 @@
+D:\Technical\Dapper\BookStoreEVE\EVE.ZeroCore.EntityFramework\bin\Debug\EVE.ZeroCore.EntityFramework.dll
+D:\Technical\Dapper\BookStoreEVE\EVE.ZeroCore.EntityFramework\bin\Debug\EVE.ZeroCore.EntityFramework.pdb
+D:\Technical\Dapper\BookStoreEVE\EVE.ZeroCore.EntityFramework\obj\Debug\EVE.ZeroCore.EntityFramework.csprojResolveAssemblyReference.cache
+D:\Technical\Dapper\BookStoreEVE\EVE.ZeroCore.EntityFramework\obj\Debug\EVE.ZeroCore.EntityFramework.dll
+D:\Technical\Dapper\BookStoreEVE\EVE.ZeroCore.EntityFramework\obj\Debug\EVE.ZeroCore.EntityFramework.pdb
