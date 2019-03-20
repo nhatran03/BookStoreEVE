@@ -54,6 +54,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -79,13 +80,21 @@
     <Compile Include="Domain\Entities\IPassivable.cs" />
     <Compile Include="Domain\Entities\ISoftDelete.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Modules\BookStoreEVEModule.cs" />
+    <Compile Include="Modules\BookStoreEVEModuleCollection.cs" />
+    <Compile Include="Modules\BookStoreEVEModuleInfo.cs" />
+    <Compile Include="Modules\DependsOnAttribute.cs" />
+    <Compile Include="Modules\IBookStoreEVEModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\BookStoreEVEAssemblyFinder.cs" />
     <Compile Include="Reflection\Extensions\AssemblyExtensions.cs" />
     <Compile Include="Reflection\AssemblyHelper.cs" />
     <Compile Include="Reflection\Extensions\MemberInfoExtensions.cs" />
     <Compile Include="Reflection\Extensions\TypeExtensions.cs" />
     <Compile Include="Reflection\IAssemblyFinder.cs" />
     <Compile Include="Reflection\ITypeFinder.cs" />
+    <Compile Include="Reflection\ProxyHelper.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
     <Compile Include="Reflection\TypeFinder.cs" />
     <Compile Include="Reflection\TypeHelper.cs" />
   </ItemGroup>
