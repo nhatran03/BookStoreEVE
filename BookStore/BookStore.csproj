@@ -63,7 +63,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Check.cs" />
+    <Compile Include="Configuration\DictionaryBasedConfig.cs" />
+    <Compile Include="Configuration\IDictionaryBasedConfig.cs" />
+    <Compile Include="Dependency\ConventionalRegistrationConfig.cs" />
+    <Compile Include="Dependency\IConventionalDependencyRegistrar.cs" />
+    <Compile Include="Dependency\IConventionalRegistrationContext.cs" />
+    <Compile Include="Dependency\IIocManager.cs" />
+    <Compile Include="Dependency\IIocRegistrar.cs" />
+    <Compile Include="Dependency\IIocResolver.cs" />
     <Compile Include="Domain\Entities\Auditing\IDeletionAudited.cs" />
     <Compile Include="Domain\Entities\Auditing\IHasDeletionTime.cs" />
     <Compile Include="Domain\Entities\Entity.cs" />
@@ -80,6 +88,7 @@
     <Compile Include="Domain\Entities\IPassivable.cs" />
     <Compile Include="Domain\Entities\ISoftDelete.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Modules\BookStoreEVEModule.cs" />
     <Compile Include="Modules\BookStoreEVEModuleCollection.cs" />
     <Compile Include="Modules\BookStoreEVEModuleInfo.cs" />
