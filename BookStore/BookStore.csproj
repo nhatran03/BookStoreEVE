@@ -96,7 +96,16 @@
     <Compile Include="Domain\Entities\ISoftDelete.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Localization\Dictionaries\DictionaryBasedLocalizationSource.cs" />
+    <Compile Include="Localization\Dictionaries\IDictionaryBasedLocalizationSource .cs" />
     <Compile Include="Localization\Dictionaries\ILocalizationDictionary.cs" />
+    <Compile Include="Localization\Dictionaries\ILocalizationDictionaryProvider.cs" />
+    <Compile Include="Localization\Dictionaries\Json\JsonEmbeddedFileLocalizationDictionaryProvider.cs" />
+    <Compile Include="Localization\Dictionaries\Json\JsonFileLocalizationDictionaryProvider.cs" />
+    <Compile Include="Localization\Dictionaries\Json\JsonLocalizationDictionary.cs" />
+    <Compile Include="Localization\Dictionaries\Json\JsonLocalizationFile.cs" />
+    <Compile Include="Localization\Dictionaries\LocalizationDictionary.cs" />
+    <Compile Include="Localization\Dictionaries\Utf8Helper.cs" />
     <Compile Include="Localization\ILocalizableString.cs" />
     <Compile Include="Localization\ILocalizationContext.cs" />
     <Compile Include="Localization\ILocalizationManager.cs" />
@@ -124,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\Entities\Caching\" />
+    <Folder Include="Localization\Dictionaries\Xml\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

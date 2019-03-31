@@ -1,11 +1,12 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
+using System.Globalization;
 
 namespace BookStore.Localization.Dictionaries
 {
 	/// <summary>
 	/// Represents a dictionary that is used to find a localized string.
 	/// </summary>
-	interface ILocalizationDictionary
+	public interface ILocalizationDictionary
 	{
 		/// <summary>
 		/// Culture of the dictionary.
