@@ -1,34 +1,66 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 
 namespace BookStore.Localization.Dictionaries
 {
-	public class LocalizationDictionary : ILocalizationDictionary
+	public class LocalizationDictionary : ILocalizationDictionary, IEnumerable<LocalizedString>
 	{
+		public CultureInfo CultureInfo { get; private set; }
+
+		/// <inheritdoc/>
 		public virtual string this[string name]
 		{
 			get
 			{
-				throw new NotImplementedException();
+				var localizedString = GetOrNull(name);
+				return localizedString?.Value;
 			}
-
 			set
 			{
-				throw new NotImplementedException();
+				dictionary[name] = new LocalizedString(name, value, CultureInfo);
 			}
 		}
 
-		public CultureInfo CultureInfo{ get; private set; }
+		private readonly Dictionary<string, LocalizedString> dictionary;
 
-		public IReadOnlyList<LocalizedString> GetAllStrings()
+		/// <summary>
+		/// Creates a new <see cref="LocalizationDictionary"/> object.
+		/// </summary>
+		/// <param name="cultureInfo">Culture of the dictionary</param>
+		public LocalizationDictionary(CultureInfo cultureInfo)
 		{
-			throw new NotImplementedException();
+			CultureInfo = cultureInfo;
+			dictionary = new Dictionary<string, LocalizedString>();
 		}
 
-		public LocalizedString GetOrNull(string name)
+		/// <inheritdoc/>
+		public virtual LocalizedString GetOrNull(string name)
 		{
-			throw new NotImplementedException();
+			LocalizedString localizedString;
+			return dictionary.TryGetValue(name, out localizedString) ? localizedString : null;
+		}
+
+		/// <inheritdoc/>
+		public virtual IReadOnlyList<LocalizedString> GetAllStrings()
+		{
+			return dictionary.Values.ToImmutableList();
+		}
+
+		/// <inheritdoc/>
+		public virtual IEnumerator<LocalizedString> GetEnumerator()
+		{
+			return GetAllStrings().GetEnumerator();
+		}
+
+		IEnumerator IEnumerable.GetEnumerator()
+		{
+			return GetAllStrings().GetEnumerator();
+		}
+
+		protected bool Contains(string name)
+		{
+			return dictionary.ContainsKey(name);
 		}
 	}
 }

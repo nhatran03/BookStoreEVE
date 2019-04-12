@@ -1,5 +1,8 @@
 ﻿using BookStore.Extensions;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
@@ -56,13 +59,13 @@ namespace BookStore.Localization.Dictionaries.Json
 			}
 			catch (JsonException ex)
 			{
-				throw new StudioXException("Can not parse json string. " + ex.Message);
+				throw new BookStoreEVEException("Can not parse json string. " + ex.Message);
 			}
 
 			var cultureCode = jsonFile.Culture;
 			if (string.IsNullOrEmpty(cultureCode))
 			{
-				throw new StudioXException("Culture is empty in language json file.");
+				throw new BookStoreEVEException("Culture is empty in language json file.");
 			}
 
 			var dictionary = new JsonLocalizationDictionary(CultureInfoHelper.Get(cultureCode));
@@ -71,7 +74,7 @@ namespace BookStore.Localization.Dictionaries.Json
 			{
 				if (string.IsNullOrEmpty(item.Key))
 				{
-					throw new StudioXException("The key is empty in given json string.");
+					throw new BookStoreEVEException("The key is empty in given json string.");
 				}
 
 				if (dictionary.Contains(item.Key))
@@ -84,7 +87,7 @@ namespace BookStore.Localization.Dictionaries.Json
 
 			if (dublicateNames.Count > 0)
 			{
-				throw new StudioXException(
+				throw new BookStoreEVEException(
 					"A dictionary can not contain same key twice. There are some duplicated names: " +
 					dublicateNames.JoinAsString(", "));
 			}

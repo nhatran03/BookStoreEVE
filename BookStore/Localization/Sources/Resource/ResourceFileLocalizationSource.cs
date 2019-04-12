@@ -1,4 +1,5 @@
-﻿using BookStore.Dependency;
+﻿using BookStore.Configuration.Startup;
+using BookStore.Dependency;
 using Castle.Core.Logging;
 using System.Resources;
 

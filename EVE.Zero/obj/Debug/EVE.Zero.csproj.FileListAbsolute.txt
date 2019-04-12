@@ -3,3 +3,8 @@ D:\Technical\Dapper\BookStoreEVE\EVE.Zero\bin\Debug\EVE.Zero.pdb
 D:\Technical\Dapper\BookStoreEVE\EVE.Zero\obj\Debug\EVE.Zero.csprojResolveAssemblyReference.cache
 D:\Technical\Dapper\BookStoreEVE\EVE.Zero\obj\Debug\EVE.Zero.dll
 D:\Technical\Dapper\BookStoreEVE\EVE.Zero\obj\Debug\EVE.Zero.pdb
+C:\Nha\BookStore\BookStoreEVE\EVE.Zero\bin\Debug\EVE.Zero.dll
+C:\Nha\BookStore\BookStoreEVE\EVE.Zero\bin\Debug\EVE.Zero.pdb
+C:\Nha\BookStore\BookStoreEVE\EVE.Zero\obj\Debug\EVE.Zero.csprojResolveAssemblyReference.cache
+C:\Nha\BookStore\BookStoreEVE\EVE.Zero\obj\Debug\EVE.Zero.dll
+C:\Nha\BookStore\BookStoreEVE\EVE.Zero\obj\Debug\EVE.Zero.pdb

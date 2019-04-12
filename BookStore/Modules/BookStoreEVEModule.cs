@@ -1,4 +1,6 @@
-﻿namespace BookStore.Modules
+﻿using BookStore.Dependency;
+
+namespace BookStore.Modules
 {
 	/// <summary>
 	/// This class must be implemented by all module definition classes.
