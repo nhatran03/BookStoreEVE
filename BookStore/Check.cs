@@ -11,11 +11,22 @@ namespace BookStore
 	public class Check
     {
 		[ContractAnnotation("value:null => halt")]
-		public static T NotNull<T>(T value,[InvokerParameterName] [NotNull] string parameterName)
+		public static T NotNull<T>(T value, [InvokerParameterName] [NotNull] string parameterName)
 		{
-			if(value == null)
+			if (value == null)
 			{
 				throw new ArgumentNullException(parameterName);
+			}
+
+			return value;
+		}
+
+		[ContractAnnotation("value:null => halt")]
+		public static string NotNullOrEmpty(string value, [InvokerParameterName] [NotNull] string parameterName)
+		{
+			if (value.IsNullOrEmpty())
+			{
+				throw new ArgumentException($"{parameterName} can not be null or empty!", parameterName);
 			}
 
 			return value;
@@ -37,10 +48,11 @@ namespace BookStore
 		{
 			if (value.IsNullOrEmpty())
 			{
-				throw new ArgumentException(parameterName + "can not be null or empty!", parameterName);
+				throw new ArgumentException(parameterName + " can not be null or empty!", parameterName);
 			}
 
 			return value;
 		}
-    }
+	}
+
 }

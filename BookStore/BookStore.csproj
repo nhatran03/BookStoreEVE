@@ -64,6 +64,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Check.cs" />
+    <Compile Include="Configuration\DictionaryBasedConfig.cs" />
+    <Compile Include="Configuration\IDictionaryBasedConfig.cs" />
+    <Compile Include="Configuration\ISettingStore.cs" />
+    <Compile Include="Configuration\ISettingValue.cs" />
+    <Compile Include="Configuration\SettingDefinition.cs" />
+    <Compile Include="Configuration\SettingInfo.cs" />
+    <Compile Include="Configuration\Startup\ILocalizationConfiguration.cs" />
+    <Compile Include="Configuration\Startup\ILocalizationSourceList .cs" />
+    <Compile Include="Dependency\ConventionalRegistrationConfig.cs" />
+    <Compile Include="Dependency\IConventionalDependencyRegistrar.cs" />
+    <Compile Include="Dependency\IConventionalRegistrationContext.cs" />
+    <Compile Include="Dependency\IIocManager.cs" />
+    <Compile Include="Dependency\IIocRegistrar.cs" />
+    <Compile Include="Dependency\IIocResolver.cs" />
+    <Compile Include="Dependency\ISingletonDependency.cs" />
     <Compile Include="Domain\Entities\Auditing\IDeletionAudited.cs" />
     <Compile Include="Domain\Entities\Auditing\IHasDeletionTime.cs" />
     <Compile Include="Domain\Entities\Entity.cs" />
@@ -81,6 +96,23 @@
     <Compile Include="Domain\Entities\ISoftDelete.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Localization\Dictionaries\DictionaryBasedLocalizationSource.cs" />
+    <Compile Include="Localization\Dictionaries\IDictionaryBasedLocalizationSource .cs" />
+    <Compile Include="Localization\Dictionaries\ILocalizationDictionary.cs" />
+    <Compile Include="Localization\Dictionaries\ILocalizationDictionaryProvider.cs" />
+    <Compile Include="Localization\Dictionaries\Json\JsonEmbeddedFileLocalizationDictionaryProvider.cs" />
+    <Compile Include="Localization\Dictionaries\Json\JsonFileLocalizationDictionaryProvider.cs" />
+    <Compile Include="Localization\Dictionaries\Json\JsonLocalizationDictionary.cs" />
+    <Compile Include="Localization\Dictionaries\Json\JsonLocalizationFile.cs" />
+    <Compile Include="Localization\Dictionaries\LocalizationDictionary.cs" />
+    <Compile Include="Localization\Dictionaries\Utf8Helper.cs" />
+    <Compile Include="Localization\ILocalizableString.cs" />
+    <Compile Include="Localization\ILocalizationContext.cs" />
+    <Compile Include="Localization\ILocalizationManager.cs" />
+    <Compile Include="Localization\LanguageInfo.cs" />
+    <Compile Include="Localization\Sources\ILocalizationSource.cs" />
+    <Compile Include="Localization\Sources\LocalizationSourceExtensionInfo.cs" />
+    <Compile Include="Localization\Sources\Resource\ResourceFileLocalizationSource.cs" />
     <Compile Include="Modules\BookStoreEVEModule.cs" />
     <Compile Include="Modules\BookStoreEVEModuleCollection.cs" />
     <Compile Include="Modules\BookStoreEVEModuleInfo.cs" />
@@ -101,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\Entities\Caching\" />
+    <Folder Include="Localization\Dictionaries\Xml\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
