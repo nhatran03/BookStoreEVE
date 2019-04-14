@@ -91,6 +91,7 @@
     <Compile Include="Dependency\IIocRegistrar.cs" />
     <Compile Include="Dependency\IIocResolver.cs" />
     <Compile Include="Dependency\ISingletonDependency.cs" />
+    <Compile Include="DisposeAction.cs" />
     <Compile Include="Domain\Entities\Auditing\IDeletionAudited.cs" />
     <Compile Include="Domain\Entities\Auditing\IHasDeletionTime.cs" />
     <Compile Include="Domain\Entities\Entity.cs" />
@@ -108,6 +109,10 @@
     <Compile Include="Domain\Entities\ISoftDelete.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="IGuidGenerator.cs" />
+    <Compile Include="IHasErrorCode.cs" />
+    <Compile Include="IShouldInitialize.cs" />
+    <Compile Include="IUserIdentifier.cs" />
     <Compile Include="Localization\Dictionaries\DictionaryBasedLocalizationSource.cs" />
     <Compile Include="Localization\Dictionaries\IDictionaryBasedLocalizationSource .cs" />
     <Compile Include="Localization\Dictionaries\ILocalizationDictionary.cs" />
@@ -135,7 +140,10 @@
     <Compile Include="Modules\BookStoreEVEModuleInfo.cs" />
     <Compile Include="Modules\DependsOnAttribute.cs" />
     <Compile Include="Modules\IBookStoreEVEModuleManager.cs" />
+    <Compile Include="NamedTypeSelector.cs" />
+    <Compile Include="NameValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomHelper.cs" />
     <Compile Include="Reflection\BookStoreEVEAssemblyFinder.cs" />
     <Compile Include="Reflection\Extensions\AssemblyExtensions.cs" />
     <Compile Include="Reflection\AssemblyHelper.cs" />
